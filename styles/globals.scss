@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./layouts/navigation_bar.scss";
+@import './bootstrap.scss';
 html,
 body {
   padding: 0;

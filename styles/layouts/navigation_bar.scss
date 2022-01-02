@@ -1,0 +1,36 @@
+.navbar{
+    &-container{
+        color:white;
+        background-color: darkslateblue;
+        width: 200px;
+        height: 100vh;
+        overflow-y: scroll;
+        padding: 20px;
+    }
+    &-item{
+        &>div{
+            display: flex;
+            align-items: center;
+        }
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        margin: 2rem 0;
+        font-size: 16px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #999;
+        &-icon{
+            margin-right:10px;
+            &-dropdown{
+                font-size: 13px;
+            }
+        }
+    }
+    &-logo{
+        &-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
