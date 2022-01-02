@@ -1,12 +1,10 @@
 import type { NextPage } from 'next'
-import styles from '../styles/Home.module.css'
-
+import styles from '../styles/Home.module.scss'
+import NavigationBar from '../components/layouts/NavigationBar';
 const Home: NextPage = () => {
   return (
     <div className="container">
-      <div className="test-css">
-        Hello
-      </div>
+      <NavigationBar></NavigationBar>
     </div>
   )
 }
