@@ -15,7 +15,6 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-        margin: 2rem 0;
         font-size: 16px;
         padding-bottom: 10px;
         border-bottom: 1px solid #999;
@@ -31,6 +30,19 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+        }
+    }
+    &-subitem{
+        &-container{
+            transition: .6s;
+        }
+        &-item{
+            height: 100%;
+            display: flex;
+            padding-left: 1.6rem;
+            margin: .5rem 0;
+            font-size: 14px;
+            transition: .6s;
         }
     }
 }
