@@ -1,9 +1,9 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Dashboard from '../src/components/dashboard/Dashboard';
 
 const Home: NextPage = () => {
   return (
-    <div className="page-padding">
-    </div>
+    <Dashboard/>
   )
 }
 

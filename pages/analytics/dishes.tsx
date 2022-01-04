@@ -2,7 +2,7 @@ import React from 'react'
 
 const Dishes = () => {
     return (
-        <div className="page-padding">
+        <div className="page-container">
             
         </div>
     )
