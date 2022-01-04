@@ -2,27 +2,40 @@
     &-container{
         color:white;
         background-color: darkslateblue;
-        width: 200px;
+        width: 240px;
         height: 100vh;
         overflow-y: scroll;
         padding: 20px;
     }
+    &-subtitle{
+        text-transform: uppercase;
+        opacity: .6;
+        margin-top: 1rem;
+        font-size: 13px;
+        font-weight: bold;
+        text-decoration: underline;
+    }
     &-item{
-        &>div{
-            display: flex;
-            align-items: center;
-        }
         cursor: pointer;
         display: flex;
         align-items: center;
         font-size: 16px;
-        padding-bottom: 10px;
+        padding: 10px;
         border-bottom: 1px solid #999;
+        transition: .2s;
+        & > div{
+            display: flex;
+            align-items: center;
+        }
         &-icon{
             margin-right:10px;
             &-dropdown{
                 font-size: 13px;
             }
+        }
+        &:hover{
+            background-color: whitesmoke;
+            color: black;
         }
     }
     &-logo{
@@ -34,15 +47,21 @@
     }
     &-subitem{
         &-container{
-            transition: .6s;
+            transition: .2s;
         }
         &-item{
             height: 100%;
             display: flex;
-            padding-left: 1.6rem;
-            margin: .5rem 0;
+            padding: 5px;
+            margin: .5rem 1.5rem;
             font-size: 14px;
-            transition: .6s;
+            align-items: center;
+            cursor: pointer;
+            transition: .2s;
+            &:hover{
+                background-color: whitesmoke;
+                color: black;
+            }
         }
     }
 }
