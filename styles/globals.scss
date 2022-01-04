@@ -1,5 +1,6 @@
-@import "./layouts/navigation_bar.scss";
 @import './bootstrap.scss';
+@import './layouts/navigation_bar.scss';
+@import './dashboard/dashboard.scss';
 html,
 body {
   padding: 0;
@@ -19,8 +20,11 @@ a {
 
 #__next{
   display: flex;
+  width: 100%;
 }
 
-.page-padding{
-  padding: 0.5rem 1.5rem;
+.page-container{
+  width: 80%;
+  padding: 2rem 1.5rem;
+  background-color: #F9FAFC;
 }

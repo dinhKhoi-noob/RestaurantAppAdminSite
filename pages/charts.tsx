@@ -2,7 +2,7 @@ import React from 'react'
 
 const Charts = () => {
     return (
-        <div className="page-padding">
+        <div className="page-container">
             
         </div>
     )
