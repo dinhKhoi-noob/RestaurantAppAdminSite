@@ -1,6 +1,7 @@
 import { ScriptProps } from 'next/script';
 import React from 'react';
 import NavigationBar from './NavigationBar';
+import TopNavigationBar from './TopNavigationBar';
 
 interface Layout{
     children: ScriptProps
@@ -9,9 +10,11 @@ interface Layout{
 const Layout = (props: Layout) => {
     return (
         <>
-            <NavigationBar>
-            </NavigationBar>
-            {props.children}
+            <NavigationBar/>
+            <div className="w-100-percent">
+                <TopNavigationBar/>
+                {props.children}
+            </div>
         </>
     )
 }

@@ -1,5 +1,5 @@
 @import './bootstrap.scss';
-@import './layouts/navigation_bar.scss';
+@import './layouts/layout.scss';
 @import './dashboard/dashboard.scss';
 html,
 body {
@@ -24,7 +24,7 @@ a {
 }
 
 .page-container{
-  width: 80%;
-  padding: 2rem 1.5rem;
+  width: 100%;
+  padding: 87.4px 1.5rem 2rem 270px;
   background-color: #F9FAFC;
 }
