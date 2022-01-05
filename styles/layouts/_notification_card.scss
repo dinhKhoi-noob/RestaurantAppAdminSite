@@ -1,0 +1,17 @@
+.notification-card{
+    &-container{
+        display: flex;
+        width: 100%;
+        margin: 10px 0;
+    }
+    &-avatar{
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        object-position: center;
+    }
+    &-time{
+        color:darkblue;
+        margin: 5px 0;
+    }
+}

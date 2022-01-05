@@ -10,9 +10,7 @@
             margin: 0 1%;
             background-color: white;
             transition: .5s;
-            &:hover{
-                transform: translateY(-3%);
-            }
+            cursor: pointer;
         }
         &-header{
             height: 50%;
@@ -24,11 +22,11 @@
     &-container{
         display: flex;
         width: 100%;
+        padding-top: 2rem;
     }
     &-title{
         font-weight: bold;
         font-size: 12px;
-        opacity: .5;
         text-transform: uppercase;
     }
     &-icon{
