@@ -5,12 +5,13 @@ interface NotificationCardPropsScript{
     avatar: String;
     content: String;
     time: String;
+    isRead: Boolean;
 }
 
 const NotificationCard = (props: NotificationCardPropsScript) => {
-    const {username,content,time} = props;
+    const {username,content,time,isRead} = props;
     return (
-        <div className="notification-card-container">
+        <div className={isRead?"notification-card-container":"notification-card-container-unread"}>
             
             <img src="https://thumbs.dreamstime.com/b/female-user-avatar-profile-picture-icon-isolated-vector-illustration-flat-design-people-character-white-background-woman-146472409.jpg" alt="avatar" className="notification-card-avatar"/>
             <div className="notification-card-content-container">
