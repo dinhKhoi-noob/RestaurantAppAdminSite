@@ -9,20 +9,20 @@
         position: fixed;
         width: calc(100% - 270px);
         margin-left: 270px;
+        justify-content: space-between;
     }
     &-right-section{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        width: 15%;
+        width: 150px;
     }
     &-search{
         &-area{
             display: flex;
-            width: 85%;
         }
         &-input{
-            padding: 5px 10px;
+            padding: 5px 20px;
             border:1px solid #999;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             border-right: none;
@@ -37,7 +37,7 @@
             border:1px solid #999;
             border-left: none;
             cursor: pointer;
-            padding-right: 12px;
+            padding-right: 20px;
             border-radius: 0 15px 15px 0;
         }
     }
@@ -104,6 +104,7 @@
             display: flex;
             flex-direction: column;
             align-items:center;
+            position: relative;
             justify-content: center;
         }
         &-avatar{
@@ -116,6 +117,32 @@
         }
         &-username{
             font-size: 14px;
+        }
+        &-dropdown{
+            &-container{
+                z-index: 100;
+                background-color: white;
+                box-shadow: 0 0 2px 0;
+                position: absolute;
+                width: 100px;
+                left: 50%;
+                top: 50%;
+                padding:3px;
+                padding-top: 5px;
+                transform: translate(-50%,22%);
+                color: #555;
+                border-radius: 5px;
+            }
+            &-tag{
+                display: flex;
+                padding: 10px;
+                justify-content: space-between;
+                cursor: pointer;
+                transition: .2s;
+                &:hover{
+                    background-color: #eee;
+                }
+            }
         }
     }
     &-section{

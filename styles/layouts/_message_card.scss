@@ -1,0 +1,32 @@
+.message-card{
+    &__container{
+        display: flex;
+        padding: 8px 5px;
+        align-items: center;
+        &--bg{
+            display: flex;
+            padding: 8px 5px;
+            align-items: center;
+            background-color: #eee;
+        }
+    }
+    &__latest-message{
+        font-size: 15px;
+    }
+    &__avatar-section{
+        display: flex;
+        align-items: flex-end;
+        width: 78px;
+    }
+    &__user-online{
+        border: 5px solid #58c472;
+        position: relative;
+        right: 20px;
+        border-radius: 50%;
+        height: 0;
+    }
+    &__time{
+        margin-top:16px;
+        color: darkblue;
+    }
+}
