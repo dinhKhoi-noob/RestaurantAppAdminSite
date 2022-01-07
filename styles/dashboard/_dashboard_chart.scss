@@ -1,0 +1,44 @@
+.dashboard-chart{
+    &__container{
+        padding: 50px 0 50px 30px;
+        justify-content: space-around;
+    }
+    &__wrapper{
+        &-line{
+            max-width: 700px;
+            max-height: 700px;
+            width: 60%;
+            padding: 50px 10px 30px 10px;
+            background-color: white;
+        }
+        &-pie{
+            background-color: white;
+            max-width: 400px;
+            max-height: 600px;
+            padding: 50px 10px 30px 10px;   
+            width: 35%;
+        }
+    }
+    &__title{
+        text-align: center;
+        font-size: 19px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    &__dropdown{
+        &-section{
+            position: relative;
+            float: right;
+            z-index: 0;
+        }
+        &-selector{
+            background-color: transparent;
+            border: none;
+            font-size: 15px;
+            padding:3px 10px;
+            color: darkblue;
+            font-weight: bold;
+            font-family: 'Segoe UI';
+        }
+    }
+}

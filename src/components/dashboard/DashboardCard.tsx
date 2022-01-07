@@ -19,7 +19,7 @@ const DashboardCard = (props:DashboardCardInterface) => {
     const isDeacreasing = additionalInfomation?.isDeacreasing;
     const DisplayIcon = props.icon;
     return (
-        <div className={"dashboard-card-first-type-item dashboard-card-border-"+mainColor}>
+        <div className="dashboard-card-first-type-item">
             <div className="dashboard-card-first-type-header">
                 <div className="dashboard-card-title">
                     {title}
