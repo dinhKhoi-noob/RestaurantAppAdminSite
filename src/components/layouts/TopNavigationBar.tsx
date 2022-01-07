@@ -1,16 +1,18 @@
 import React, { useState,useEffect } from 'react';
+import { FaRegUserCircle } from 'react-icons/fa';
+import { GiEntryDoor } from 'react-icons/gi'
 import { RiSearch2Line,RiNotification4Fill } from 'react-icons/ri';
 import { AiFillMessage } from 'react-icons/ai';
+import { animated, Transition } from 'react-spring';
 import NotificationCard from './top_navigation_bar/NotificationCard';
 import MessageCard from './top_navigation_bar/MessageCard';
-import { animated, Transition } from 'react-spring';
 
 
 const TopNavigationBar = () => {
 
     const [isToggleOnNotification,setIsToggleOnNotification] = useState(false);
     const [isToggleOnMessage,setIsToggleOnMessage] = useState(false);
-
+    const [isToggleOnUser,setIsToggleOnUser] = useState(false);
     return (
         <div className="top-navbar-container">
             <form className="top-navbar-search-area">
@@ -21,8 +23,9 @@ const TopNavigationBar = () => {
                 <div className="wrapper pos-relative">
                     <div className="top-navbar-notification-section"
                         onClick={()=>{
-                            const duration = isToggleOnMessage?500:0;
+                            const duration = (isToggleOnMessage || isToggleOnUser) ? 500:0;
                             setIsToggleOnMessage(false);
+                            setIsToggleOnUser(false);
                             setTimeout(()=>{
                                 setIsToggleOnNotification(!isToggleOnNotification);
                             },duration);
@@ -75,8 +78,9 @@ const TopNavigationBar = () => {
                 <div className="wrapper pos-relative">
                     <div className="top-navbar-notification-section"
                         onClick={()=>{
-                            const duration = isToggleOnNotification?500:0;
+                            const duration = (isToggleOnNotification || isToggleOnUser)?500:0;
                             setIsToggleOnNotification(false);
+                            setIsToggleOnUser(false);
                             setTimeout(()=>{
                                 setIsToggleOnMessage(!isToggleOnMessage);
                             },duration);
@@ -122,11 +126,45 @@ const TopNavigationBar = () => {
                     }
                     </Transition>
                 </div>
-                <div className="top-navbar-user-section">
-                    <div className="top-navbar-user-avatar"></div>
-                    <div className="top-navbar-user-username">
-                        Dinh Khoi
-                    </div>
+                <div className="top-navbar-user-section"
+                    onClick={()=>{
+                        const duration = (isToggleOnMessage || isToggleOnNotification) ? 500:0;
+                        setIsToggleOnMessage(false);
+                        setIsToggleOnNotification(false);
+                        setTimeout(()=>{
+                            setIsToggleOnUser(!isToggleOnUser);
+                        },duration);
+                    }}
+                >
+                        <div className="top-navbar-user-avatar"></div>
+                        <div className="top-navbar-user-username">
+                            Dinh Khoi
+                        </div>
+                    <Transition
+                        native
+                        items={isToggleOnUser}
+                        from={{display:'none',opacity:0,height:0}}
+                        enter={{display:'unset',opacity:1,height:95}}
+                        leave={{display:'unset',opacity:0,height:0}}
+                    >
+                    {
+                        ({display,opacity,height},item)=>(
+                            item?
+                            <animated.div style={{opacity:opacity,display:display,height:height}} className="top-navbar-user-dropdown-container">
+                                <div className="top-navbar-user-dropdown-tag">
+                                    <FaRegUserCircle/>
+                                    <div>Profile</div>
+                                </div>
+                                <div className="top-navbar-user-dropdown-tag">
+                                    <GiEntryDoor/>
+                                    <div>Logout</div>
+                                </div>
+                            </animated.div>
+                            :
+                            <></>
+                        )   
+                    }
+                    </Transition>
                 </div>
             </div>
         </div>
