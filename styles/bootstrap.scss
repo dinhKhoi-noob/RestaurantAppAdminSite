@@ -8,7 +8,9 @@
 .m-tb-1rem{
     margin: 1rem 0;
 }
-
+.m-all-1rem{
+    margin: 1rem;
+}
 .min-h-6rem{
     min-height: 6rem;
 }
@@ -23,4 +25,10 @@
 
 .pos-relative{
     position: relative;
+}
+
+.centralized-element{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }

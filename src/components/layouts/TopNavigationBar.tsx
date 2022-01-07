@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import { RiSearch2Line,RiNotification4Fill } from 'react-icons/ri';
 import { AiFillMessage } from 'react-icons/ai';
 import NotificationCard from './top_navigation_bar/NotificationCard';
+import MessageCard from './top_navigation_bar/MessageCard';
 import { animated, Transition } from 'react-spring';
 
 
@@ -94,20 +95,24 @@ const TopNavigationBar = () => {
                     {
                         ({display,opacity,height},item)=>(
                             item?
-                            <animated.div style={{opacity:opacity,display:display,height:height,transform:"translateX(-61%)"}} className="top-navbar-notification-container"
-                                onBlur={()=>{
-                                    console.log(1);
-                                }}
-                            >
+                            <animated.div style={{opacity:opacity,display:display,height:height,transform:"translateX(-61%)"}} className="top-navbar-notification-container" id="top-navbar-message-container">
                                 <div className="top-navbar-section-title">
                                     Messages
                                 </div>
+                                <form className="top-navbar-search-area m-all-1rem">
+                                    <input type="text" className="top-navbar-search-input" placeholder="Type name to search..."/>
+                                    <button type="submit" className="top-navbar-search-btn"><RiSearch2Line></RiSearch2Line></button>
+                                </form>
+                                <div className="top-navbar-section-subtitle">
+                                    Earlier
+                                </div>
                                 <div>
-                                    <NotificationCard content="Order dfasczxsdf has been delivered" time="2days ago" username="Jane" avatar="" isRead={true}/>
-                                    <NotificationCard content="New account has been created" time="5hrs ago" username="Lucy" avatar="" isRead={false}/>
-                                    <NotificationCard content="New recepies has been created and post" time="12hrs ago" username="Ashe" avatar="" isRead={false}/>
-                                    <NotificationCard content="Order sasrtwasgh has been refunded" time="Just now" username="Kate" avatar="" isRead={false}/>
-                                    <NotificationCard content="80kgs potatoes and 20kgs beef has been received" time="19mins ago" username="Kim" avatar="" isRead={true}/>
+                                    <MessageCard latestMessage={{username:"Jane",content:"Hello"}} avatar="" time="12hrs" isRead={true} isOnline={false}/>
+                                    <MessageCard latestMessage={{username:"Kate",content:"Lorem ipsum dos noqs mets iesast bry"}} avatar="" time="18hrs" isRead={true} isOnline={true}/>
+                                    <MessageCard latestMessage={{username:"Khoi",content:"What I want just is working"}} avatar="" time="2mins" isRead={false} isOnline={true}/>
+                                    <MessageCard latestMessage={{username:"Khoi Phan",content:"From Axon with all of my disapointed"}} avatar="" time="1min" isRead={false} isOnline={true}/>
+                                    <MessageCard latestMessage={{username:"Harry",content:"G9 all"}} avatar="" time="9hrs" isRead={true} isOnline={false}/>
+                                    <MessageCard latestMessage={{username:"Dinh Khoi",content:"Lose one, win others"}} avatar="" time="Just now" isRead={false} isOnline={true}/>
                                 </div>
                                 
                             </animated.div>
