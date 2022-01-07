@@ -19,8 +19,24 @@
     display: flex;
 }
 
+.p-3rem{
+    padding: 3rem;
+}
+
+.p-t-3px{
+    padding-top: 3px;
+}
+
 .w-100-percent{
     width: 100%;
+}
+
+.w-40-percent{
+    width: 40%;
+}
+
+.w-60-percent{
+    width: 60%;
 }
 
 .pos-relative{
@@ -31,4 +47,23 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+}
+
+.m-r-1rem{
+    margin-right: 1rem;
+}
+
+.bg-delivered{
+    background-color: #00cd62;
+    color: white;
+}
+
+.bg-progress{
+    background-color: #14b8a6;
+    color: white;
+}
+
+.bg-refunded{
+    background-color: #d14343;
+    color: white;
 }

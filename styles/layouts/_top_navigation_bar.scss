@@ -10,6 +10,7 @@
         width: calc(100% - 270px);
         margin-left: 270px;
         justify-content: space-between;
+        z-index: 100;
     }
     &-right-section{
         display: flex;
